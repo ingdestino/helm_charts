@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  response-router:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-28T13:36:14.798416005+02:00"
+    description: CLM response router helm chart for Kubernetes
+    digest: 15a9c6416153613755499a9fb59406a61bb009d19656c789c3bcfa96fedfa622
+    name: response-router
+    type: application
+    urls:
+    - response-router-0.2.0.tgz
+    version: 0.2.0
+generated: "2022-04-28T13:36:14.787749339+02:00"
