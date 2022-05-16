@@ -44,9 +44,9 @@ spec:
           - name: LOG_LEVEL
             value: {{ .Values.log_level }}
           - name: SUPPORT_MESSAGE_RESEND_TIMEOUT
-            value: {{ .Values.sm_resend_timeout }}
+            value: {{ .Values.sm_resend_timeout | quote }}
           - name: API_PORT
-            value: {{ .Values.api_port }}
+            value: {{ .Values.api_port | quote }}
           - name: RESPONSE_ROUTER_EP
             value: {{ .Values.rr_endpoint }}
           - name: RESPONSE_ROUTER_API
