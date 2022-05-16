@@ -10,7 +10,7 @@ image:
 
 service:
   type: NodePort
-  port: 3500
+  port: 3100
   protocol: TCP
 
 nodePort: 31188
@@ -23,7 +23,7 @@ log_level: DEBUG
 # Timeout before Support Message re-transmission (for the same qt code)
 sm_resend_timeout: 5
 # RR API port
-api_port: 3000
+api_port: 3100
 # Response Router endpoint <IP>:<port>
 rr_endpoint: 127.0.0.1:8888
 # Response Router POST url

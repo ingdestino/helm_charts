@@ -3,23 +3,34 @@ entries:
   local-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-05-16T16:56:10.857632263+02:00"
+    created: "2022-05-16T18:14:45.759359141+02:00"
     description: CLM Local Manager helm chart for Kubernetes
-    digest: eb73fedc9168d2201214ca877aa2a63d600e84d20a6600accdf1543fae44ef94
+    digest: c83dda0ead00c014022ddb4633a3011a9dae2ee8638f341e1cef6345d6cc87ff
     name: local-manager
     type: application
     urls:
-    - local-manager-0.4.0.tgz
-    version: 0.4.0
+    - local-manager-0.1.0.tgz
+    version: 0.1.0
+  main-manager:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-05-16T18:14:45.76130371+02:00"
+    description: CLM Main Manager helm chart for Kubernetes
+    digest: 2d989e0cee1158e38b1051c32814c2db25e9f52193c1411b1063573903c12727
+    name: main-manager
+    type: application
+    urls:
+    - main-manager-0.1.0.tgz
+    version: 0.1.0
   response-router:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-05-16T16:56:10.868027814+02:00"
+    created: "2022-05-16T18:14:45.763881419+02:00"
     description: CLM response router helm chart for Kubernetes
-    digest: 6491254a866fb6da7bc8a66c87082e5c240c435c0e202cd80ec80f05428d0f10
+    digest: b64f7ee30e126dd684c43b2521fcb5ff4f2820898b2491c1462849d99e0f6a28
     name: response-router
     type: application
     urls:
-    - response-router-0.2.0.tgz
-    version: 0.2.0
-generated: "2022-05-16T16:56:10.854754224+02:00"
+    - response-router-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-05-16T18:14:45.755462147+02:00"
