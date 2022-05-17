@@ -10,7 +10,7 @@ image:
 
 service:
   type: NodePort
-  port: 3200
+  port: 3377
   protocol: TCP
 
 nodePort: 31377
