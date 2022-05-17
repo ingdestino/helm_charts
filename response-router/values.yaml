@@ -12,14 +12,14 @@ image:
 
 loglevel: "DEBUG"
 loggername: " Response Router "
-apiport: "3000"
+apiport: 3177
 
 service:
   type: NodePort
   port: 3000
   #nodeport: 32300
   protocol: TCP
-nodePort: 32300
+nodePort: 31177
 
 msgbrokerep: "80.159.227.43:31123"
 msgbrokeruser: ""

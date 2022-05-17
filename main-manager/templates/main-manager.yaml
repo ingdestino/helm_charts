@@ -50,7 +50,7 @@ spec:
           - name: LOCAL_MANAGER_CONFIG_URL
             value: {{ .Values.lm_api }}
         resources: {}
-        imagePullPolicy: {{ .Values.image.pullPolicy}}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
 ---
 apiVersion: v1
 kind: Service
@@ -61,12 +61,12 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   ports:
-  - port: {{ .Values.api_port}}
-    protocol: {{ .Values.service.protocol}}
-    targetPort: {{ .Values.service.port}}
-    nodePort: {{ .Values.nodePort}}
+  - port: {{ .Values.api_port }}
+    protocol: {{ .Values.service.protocol }}
+    targetPort: {{ .Values.api_port }}
+    nodePort: {{ .Values.nodePort }}
   selector:
     run: {{ .Release.Name }}
-  type: {{ .Values.service.type}}
+  type: {{ .Values.service.type }}
 status:
   loadBalancer: {}

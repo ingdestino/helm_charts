@@ -35,21 +35,21 @@ spec:
         name: {{ .Chart.Name }}
         env:
           - name: API_PORT
-            value: "3000" #{{ .Values.apiport}}
+            value: {{ .Values.apiport | quote}}
           - name: LOG_LEVEL
-            value: {{ .Values.loglevel}}
+            value: {{ .Values.loglevel }}
           - name: LOGGER_NAME
-            value: {{ .Values.loggername}}
+            value: {{ .Values.loggername }}
           - name: MSG_BROKER_ADDR
-            value: {{ .Values.msgbrokerep}}
+            value: {{ .Values.msgbrokerep }}
           - name: MSG_BROKER_USER
-            value: {{ .Values.msgbrokeruser}}
+            value: {{ .Values.msgbrokeruser }}
           - name: MSG_BROKER_PASSWORD
-            value: {{ .Values.msgbrokerpwd}}
+            value: {{ .Values.msgbrokerpwd }}
           - name: SEND_TOPIC
-            value: {{ .Values.sendtopic}}
+            value: {{ .Values.sendtopic }}
         resources: {}
-        imagePullPolicy: {{ .Values.image.pullPolicy}}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
 
 ---
 apiVersion: v1
@@ -61,12 +61,12 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   ports:
-  - port: {{ .Values.service.port}}
-    protocol: {{ .Values.service.protocol}}
-    targetPort: {{ .Values.service.port}}
-    nodePort: {{ .Values.nodePort}}
+  - port: {{ .Values.apiport }}
+    protocol: {{ .Values.service.protocol }}
+    targetPort: {{ .Values.apiport }}
+    nodePort: {{ .Values.nodePort }}
   selector:
     run: {{ .Release.Name }}
-  type: {{ .Values.service.type}}
+  type: {{ .Values.service.type }}
 status:
   loadBalancer: {}

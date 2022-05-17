@@ -13,7 +13,7 @@ service:
   port: 3100
   protocol: TCP
 
-nodePort: 31188
+nodePort: 31277
 
 image_repo: fbksense/local-manager
 image_tag: v0
@@ -23,7 +23,7 @@ log_level: DEBUG
 # Timeout before Support Message re-transmission (for the same qt code)
 sm_resend_timeout: 5
 # RR API port
-api_port: 3100
+api_port: 3277
 # Response Router endpoint <IP>:<port>
 rr_endpoint: 127.0.0.1:8888
 # Response Router POST url
